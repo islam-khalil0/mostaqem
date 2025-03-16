@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-const WelcomePage = () => {
+const Invitation = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const [exitAnimation, setExitAnimation] = useState(false);
@@ -16,16 +16,16 @@ const WelcomePage = () => {
     "حمّل التطبيق الآن وابدأ رحلتك الروحية.",
   ];
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setExitAnimation(true);
-      setTimeout(() => {
-        navigate("/");
-      }, 1000);
-    }, 9000);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setExitAnimation(true);
+  //     setTimeout(() => {
+  //       navigate("/");
+  //     }, 1000);
+  //   }, 9000);
 
-    return () => clearTimeout(timeout);
-  }, [navigate]);
+  //   return () => clearTimeout(timeout);
+  // }, [navigate]);
 
   return (
     <motion.div
@@ -102,4 +102,4 @@ const WelcomePage = () => {
   );
 };
 
-export default WelcomePage;
+export default Invitation;
