@@ -27,3 +27,22 @@ body {
   background: white;
   min-height: 100vh;
 }
+/* تخصيص شريط التمرير للمتصفحات التي تدعم WebKit (مثل Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* عرض شريط التمرير */
+}
+
+::-webkit-scrollbar-track {
+  background: #725142; /* لون خلفية التراك */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ee8664, #ee8664); /* تدرج لوني */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ee8664, #ee8664); /* لون مختلف عند التحويم */
+}
+
