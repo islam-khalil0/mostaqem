@@ -55,7 +55,7 @@ const WelcomePage = () => {
             key={index}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: index * 0.05 }}
+            transition={{ duration: 2, delay: index * 0.07 }}
           >
             {char}
           </motion.span>
@@ -73,6 +73,31 @@ const WelcomePage = () => {
           {line}
         </motion.p>
       ))}
+
+      <motion.a
+        href="https://github.com/Mostaqem/mostaqem_android/releases/download/0.4.0/app-release.apk"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 px-16 py-3 text-md font-bold text-[#5a3d2b] bg-[#FCEEDD] rounded-xl hover:bg-[#e6d4c3] transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 2 }}
+      >
+        تحميل التطبيق
+      </motion.a>
+
+      {/* ملاحظة البيتا */}
+      <motion.p
+        className="text-sm text-[#FCEEDD] mt-3 opacity-80"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 3 }}
+      >
+        ⚠️ التطبيق حاليًا في مرحلة البيتا وغير مدعوم على التابليت في الوقت
+        الحالي.
+      </motion.p>
     </motion.div>
   );
 };
