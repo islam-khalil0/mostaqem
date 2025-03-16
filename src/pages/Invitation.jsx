@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { Helmet } from "react-helmet-async";
+
 
 const Invitation = () => {
   const { name } = useParams();
@@ -39,7 +41,8 @@ const Invitation = () => {
         backgroundSize: "200% 200%",
       }}
     >
-      {/* اللوجو */}
+
+
       <motion.img
         src={logo}
         alt="مستقيم"
@@ -88,7 +91,6 @@ const Invitation = () => {
         تحميل التطبيق
       </motion.a>
 
-      {/* ملاحظة البيتا */}
       <motion.p
         className="text-sm text-[#FCEEDD] mt-3 opacity-80"
         initial={{ opacity: 0 }}
