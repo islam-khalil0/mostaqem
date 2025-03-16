@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/WelcomePage/:name", "destination": "/index.html" },
+      { "source": "/(.*)", "destination": "/index.html" }
+    ]
+  }
+  
