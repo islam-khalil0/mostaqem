@@ -1,9 +1,8 @@
-import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "../pages/Home";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Donation from "../pages/Donation";
-import GuideMac from "../pages/GuideMac";
+import GuideMac from "../pages/guideMac";
 import Header from "./Header";
 import Footer from "./Footer";
 
