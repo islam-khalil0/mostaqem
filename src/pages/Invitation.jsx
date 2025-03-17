@@ -5,29 +5,17 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { Helmet } from "react-helmet-async";
 
-
 const Invitation = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const [exitAnimation, setExitAnimation] = useState(false);
 
-  const welcomeText = ` أهلًا بيك يا ${name}👋، مبسوطين بوجودك معنا!`;
+  const welcomeText = `أهلًا بيك يا ${name} 👋، مبسوطين بوجودك معنا!`;
   const description = [
     'مرحباً بك في "مستقيم"، التطبيق الأمثل للاستماع إلى القرآن الكريم.',
     "استمتع بتجربة استماع خالية من التشتت مع مكتبة غنية تشمل تلاوات لمختلف القراء.",
     "حمّل التطبيق الآن وابدأ رحلتك الروحية.",
   ];
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setExitAnimation(true);
-  //     setTimeout(() => {
-  //       navigate("/");
-  //     }, 1000);
-  //   }, 9000);
-
-  //   return () => clearTimeout(timeout);
-  // }, [navigate]);
 
   return (
     <motion.div
@@ -41,8 +29,6 @@ const Invitation = () => {
         backgroundSize: "200% 200%",
       }}
     >
-
-
       <motion.img
         src={logo}
         alt="مستقيم"
@@ -53,14 +39,15 @@ const Invitation = () => {
       />
 
       <motion.h1 className="text-2xl sm:text-4xl font-bold text-[#FCEEDD] mb-2">
-        {welcomeText.split("").map((char, index) => (
+        {welcomeText.split(" ").map((word, index) => (
           <motion.span
             key={index}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, delay: index * 0.07 }}
+            transition={{ duration: 2, delay: index * 0.2 }}
+            className="inline-block mx-1"
           >
-            {char}
+            {word}
           </motion.span>
         ))}
       </motion.h1>
